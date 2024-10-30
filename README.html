@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title>µAudio Plugin README</title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="824.44">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 16.0px 0.0px; font: 24.0px Times}
+    p.p2 {margin: 0.0px 0.0px 14.0px 0.0px; font: 18.0px Times}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #001de0}
+    p.p4 {margin: 0.0px 0.0px 14.0px 0.0px; font: 14.0px Times}
+    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times}
+    p.p6 {margin: 0.0px 0.0px 12.0px 0.0px; font: 12.0px Times}
+    p.p7 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Courier}
+    span.s1 {text-decoration: underline}
+    span.s2 {color: #000000}
+    span.s3 {font: 12.0px Geneva}
+    span.s4 {font: 12.0px Courier}
+    span.s5 {text-decoration: underline ; color: #001de0}
+    span.Apple-tab-span {white-space:pre}
+  </style>
+</head>
+<body>
+<h1 style="margin: 0.0px 0.0px 16.0px 0.0px; font: 24.0px Times"><b>µAudio Plugin README:</b></h1>
+<h2 style="margin: 0.0px 0.0px 14.0px 0.0px; font: 18.0px Times"><b>Contents</b></h2>
+<ul>
+  <li style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #001de0"><span class="s1"><a href="file:///Users/elizabeth/Documents/microAudio/README.html#information">Information</a></span></li>
+  <li style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #001de0"><span class="s1"><a href="file:///Users/elizabeth/Documents/microAudio/README.html#installation">Installation</a></span></li>
+  <li style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #001de0"><span class="s1"><a href="file:///Users/elizabeth/Documents/microAudio/README.html#notes">Notes</a></span></li>
+  <li style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #001de0"><span class="s1"><a href="file:///Users/elizabeth/Documents/microAudio/README.html#issues">Known Issues</a></span></li>
+</ul>
+<h3 style="margin: 0.0px 0.0px 14.0px 0.0px; font: 14.0px Times"><b>Information:</b></h3>
+<ul>
+  <li style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times">Version 0.5</li>
+  <li style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times">Release Date: 4 October 2008</li>
+  <li style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #001de0"><span class="s2">Plugin Homepage: <a href="http://compu.terlicio.us/code/plugins/audio/"><span class="s1">http://compu.terlicio.us/code/plugins/audio/</span></a></span></li>
+  <li style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times">Plugin Author: Christopher O'Connell</li>
+</ul>
+<h3 style="margin: 0.0px 0.0px 14.0px 0.0px; font: 14.0px Times"><b>Installation:</b></h3>
+<p class="p6">The most basic installation simply requires that you upload the 'microaudio' folder to your /wp-content/plugins directory. Then, from the <span class="s3">Administration -&gt; Plugins</span> menu, simply activate the plugin. Done.</p>
+<p class="p6">Options can be configured in 'Settings &gt; µAudio', although in most installations, no configuration is neccessary.</p>
+<p class="p6">If you are updating from a previous version of µAudio, you no longer need to call <span class="s4">prepare_player()</span> from k2.rollingarchives.js. You should either remove the call to <span class="s4">prepare_player</span>, or upgrade to a newer k2, restoring the file to the default.</p>
+<h3 style="margin: 0.0px 0.0px 14.0px 0.0px; font: 14.0px Times"><b>Notes:</b></h3>
+<ul>
+  <li style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times">µAudio uses the super slim mp3 player from <a href="http://www.1pixelout.net/code/audio-player-wordpress-plugin/"><span class="s5">1 Pixel Out</span></a>. This nifty little player clocks in at just 5 KB, smaller than many JavaScripts. Indeed, the total change to your pages (when no player is loaded) is a mere 495 Bytes! Even with a player loaded the entire system is under 6 KB. If bandwidth is expensive (and let's be honest, when isn't it?) µAudio is about the smallest you can get and still run.</li>
+  <li style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times">Currently uses jQuery 1.2.6 (the most recent "release" as of this release date). Most older jQuerys <i>should</i> work, if they are loaded by another plugin, but only 1.2.1+ have been independantly verified</li>
+  <li style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times">The autoconfig feature may cause a slowdown in some older browsers, particularly IE 5</li>
+  <li style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times">If you absolutely must manuallly edit the colors, change the values in the <span class="s4">rgb2hex</span> function in microAudio.js.php</li>
+</ul>
+<h3 style="margin: 0.0px 0.0px 14.0px 0.0px; font: 14.0px Times"><b>Known Issues:</b></h3>
+<ul>
+  <li style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times">Only omits jQuery from the page if the theme is detected as (exactly) 'k2'. If you have renmed your k2 folder, or need to force jQuery to load or not load, simply edit the option in 'Settings &gt; µAudio'.</li>
+  <li style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times">Please post any questions or bugs on the <a href="http://compu.terlicio.us/code/plugins/audio/micro-audio-installation/"><span class="s5">Version Installation Page</span></a>. Feature requests and comments of a more general nature should go on the <a href="http://compu.terlicio.us/code/plugins/audio/"><span class="s5">Home Page</span></a>.</li>
+</ul>
+</body>
+</html>
